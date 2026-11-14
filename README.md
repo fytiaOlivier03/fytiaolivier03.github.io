@@ -6,14 +6,18 @@ Portfolio professionnel statique en français, construit sans framework ni dépe
 
 ```text
 .
+├── CV/
+│   └── cv.pdf
 ├── index.html
 ├── css/
 │   └── style.css
 ├── js/
-│   └── scroll-reveal.js
+│   └── scroll.js
 └── assets/
     └── images/
-        └── profile.png
+        ├── logo.svg
+        ├── profile.png
+        └── profile.webp
 ```
 
 ## Prévisualisation locale

@@ -240,7 +240,7 @@ h1 { max-width: 720px; margin-bottom: 1.6rem; font-size: clamp(3.8rem, 7.6vw, 5r
   .site-footer > .back-top { grid-column: 2; grid-row: 2; }
   .site-nav { gap: .9rem; }
   .site-nav a { font-size: .9rem; }
-  .site-nav a:nth-child(1), .site-nav a:nth-child(3) { display: none; }
+  .site-nav a:nth-child(2), .site-nav a:nth-child(3) { display: none; }
   .wordmark { font-size: 1rem; }
   .hero { display: flex; flex-direction: column; align-items: stretch; padding-block: 3.5rem 4rem; }
   .hero-copy { padding: 0; }
