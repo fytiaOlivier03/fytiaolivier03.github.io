@@ -101,7 +101,7 @@ h1 { max-width: 720px; margin-bottom: 1.6rem; font-size: clamp(3.8rem, 7.6vw, 5r
 .accent-text { color: var(--accent); }
 .muted-text { color: var(--muted); }
 .hero-intro { max-width: 560px; margin-bottom: 1.5rem; color: var(--muted); font-size: 1.15rem; line-height: 1.7; }
-.hero-actions, .contact-links { display: flex; align-items: center; flex-wrap: wrap; gap: 1.25rem; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.25rem; }
 .button { min-height: 54px; display: inline-flex; align-items: center; justify-content: center; gap: 1.4rem; padding: 0 1.3rem; border: 1px solid transparent; border-radius: 3px; font-size: 1rem; font-weight: 700; transition: background .2s ease, transform .2s ease; }
 .button:hover { transform: translateY(-2px); }
 .button-primary { background: var(--accent); color: var(--background); }
@@ -190,8 +190,19 @@ h1 { max-width: 720px; margin-bottom: 1.6rem; font-size: clamp(3.8rem, 7.6vw, 5r
 .form-field input:focus, .form-field textarea:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
 .form-field textarea { min-height: 140px; resize: vertical; }
 .form-message { grid-column: 1 / -1; }
-.form-submit { width: fit-content; cursor: pointer; font-family: inherit; }
-.form-note { max-width: 760px; margin: .8rem 0 1.2rem; color: var(--muted); font-size: .9rem; }
+.contact-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+.form-submit { width: fit-content; grid-column: 1 / -1; cursor: pointer; font-family: inherit; }
+.form-submit:disabled { cursor: wait; opacity: .7; }
+.contact-status { min-height: 1.6em; grid-column: 1 / -1; margin: .4rem 0 0; color: var(--muted); font-size: .95rem; }
+.contact-note { max-width: 760px; margin: .8rem 0 1.2rem; color: var(--muted); font-size: .9rem; }
+.contact-note a { color: var(--text); text-decoration: underline; text-underline-offset: .2em; }
 .site-footer {
   display: grid;
   min-height: 80px;
@@ -279,7 +290,6 @@ h1 { max-width: 720px; margin-bottom: 1.6rem; font-size: clamp(3.8rem, 7.6vw, 5r
   .contact-section h2 { font-size: clamp(3rem, 12vw, 5rem); }
   .contact-form { grid-template-columns: 1fr; }
   .form-message { grid-column: auto; }
-  .contact-links { align-items: flex-start; gap: 1rem 1.3rem; }
   .site-footer { min-height: 100px; gap: .5rem; padding-block: .7rem; }
   .site-footer p { width: auto; }
   .back-top { font-size: .7rem; }

@@ -8,10 +8,13 @@ Portfolio professionnel statique en français, construit sans framework ni dépe
 .
 ├── CV/
 │   └── cv.pdf
+├── api/
+│   └── contact.js
 ├── index.html
 ├── css/
 │   └── style.css
 ├── js/
+│   ├── contact.js
 │   └── scroll.js
 └── assets/
     └── images/
@@ -30,7 +33,7 @@ python3 -m http.server 8000
 
 Puis ouvrir <http://localhost:8000>.
 
-Le formulaire de contact ne peut pas être envoyé en ouvrant directement `index.html` en `file://`. Il faut passer par un serveur local ou le site publié en HTTPS ; aucune soumission de test n’est faite depuis cet environnement.
+Le formulaire appelle une fonction serverless Vercel dans `api/contact.js`. Le serveur transmet les messages à Resend ; la clé API n’est jamais stockée dans le dépôt. Le serveur local Python ne traite pas cette fonction ; utilisez `vercel dev` avec les variables configurées, ou testez le site déployé.
 
 ## Publication sur GitHub Pages
 
@@ -40,4 +43,4 @@ Le formulaire de contact ne peut pas être envoyé en ouvrant directement `index
 
 ## Contact
 
-Le formulaire envoie les messages à `fytiaolivier@gmail.com` via FormSubmit. À la première soumission, FormSubmit envoie un e-mail de confirmation à cette adresse : il faut cliquer sur le lien de confirmation pour activer la réception des futurs messages. Les soumissions suivantes arrivent ensuite dans la boîte de réception. Le service traite les données du formulaire.
+Le formulaire transmet les messages à `fytiaolivier@gmail.com` via Resend. Dans **Vercel → Project Settings → Environment Variables**, configurez `RESEND_API_KEY` et `RESEND_FROM_EMAIL`, puis redéployez le projet. L’adresse d’expédition doit être vérifiée dans Resend. Ne mettez jamais la clé API dans le code ou dans le dépôt. Cette fonction ne s’exécute pas sur GitHub Pages.
