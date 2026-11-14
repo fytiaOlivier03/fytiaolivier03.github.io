@@ -115,7 +115,7 @@ h1 { max-width: 720px; margin-bottom: 1.6rem; font-size: clamp(3.8rem, 7.6vw, 7.
 .orbit-one { width: 53%; height: 53%; }
 .orbit-two { width: 75%; height: 75%; border-style: dashed; border-color: rgba(193, 242, 120, .12); }
 .orbit-three { width: 97%; height: 97%; border-color: var(--line); }
-.core { position: relative; width: 160px; height: 160px; overflow: hidden; display: grid; place-items: center; border: 1px solid rgba(193, 242, 120, .65); border-radius: 50%; background: linear-gradient(145deg, #25352a, #111a15); box-shadow: 0 0 60px rgba(193, 242, 120, .12), inset 0 0 30px rgba(193, 242, 120, .07); }
+.core { position: relative; width: 220px; height: 220px; overflow: hidden; display: grid; place-items: center; border: 1px solid rgba(193, 242, 120, .65); border-radius: 50%; background: linear-gradient(145deg, #25352a, #111a15); box-shadow: 0 0 60px rgba(193, 242, 120, .12), inset 0 0 30px rgba(193, 242, 120, .07); }
 .core img { width: 100%; height: 100%; object-fit: cover; object-position: center 24%; }
 .core i { position: absolute; right: 3px; bottom: 11px; width: 12px; height: 12px; border: 3px solid var(--background); border-radius: 50%; background: var(--accent); }
 .node { position: absolute; display: grid; width: 46px; height: 46px; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--accent); font: .64rem var(--mono); letter-spacing: .08em; }
@@ -217,7 +217,7 @@ h1 { max-width: 720px; margin-bottom: 1.6rem; font-size: clamp(3.8rem, 7.6vw, 7.
   .hero-meta { gap: .7rem; margin-top: 2rem; font-size: .75rem; }
   .hero-meta span + span::before { margin-right: .7rem; }
   .hero-art { width: min(80%, 330px); align-self: center; margin-top: 2rem; }
-  .core { width: 122px; height: 122px; }
+  .core { width: 170px; height: 170px; }
   .node { width: 38px; height: 38px; font-size: .55rem; }
   .art-caption { font-size: .52rem; }
   .scroll-cue { display: none; }
