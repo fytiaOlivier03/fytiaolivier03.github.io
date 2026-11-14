@@ -59,14 +59,14 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
   top: 0;
   width: 100%;
   min-height: 80px;
-  padding-inline: max(4vw, calc((100% - 1240px) / 2));
+  padding-inline: max(2vw, calc((100% - 1480px) / 2));
   background: rgba(16, 23, 20, .94);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
 }
 
 .site-footer {
-  width: min(100% - 8vw, 1240px);
+  width: min(100% - 4vw, 1480px);
   margin-inline: auto;
 }
 
@@ -87,7 +87,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .site-nav .nav-contact { color: var(--text); }
 .nav-contact span, .text-link span, .project-link span { color: var(--accent); }
 
-.section-wrap { width: min(100% - 8vw, 1240px); margin-inline: auto; }
+.section-wrap { width: min(100% - 4vw, 1480px); margin-inline: auto; }
 .hero { position: relative; min-height: 610px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; padding-block: 3.5rem 4.5rem; }
 .hero-copy { position: relative; z-index: 1; padding-block: 1.5rem; }
 .eyebrow { margin: 0 0 1.2rem; color: var(--accent); font-family: var(--mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; }
