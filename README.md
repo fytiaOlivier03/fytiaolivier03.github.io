@@ -9,6 +9,8 @@ Portfolio professionnel statique en français, construit sans framework ni dépe
 ├── index.html
 ├── css/
 │   └── style.css
+├── js/
+│   └── scroll-reveal.js
 └── assets/
     └── images/
         └── profile.png
