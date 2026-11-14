@@ -255,6 +255,33 @@ h1 { max-width: 720px; margin-bottom: 1.6rem; font-size: clamp(3.8rem, 7.6vw, 7.
   .skills-grid { grid-template-columns: 1fr; }
 }
 
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes reveal-art {
+  from { opacity: 0; transform: scale(.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-header { animation: reveal-up .55s ease-out both; }
+  .hero-copy > * { animation: reveal-up .65s ease-out both; }
+  .hero-copy > :nth-child(1) { animation-delay: .08s; }
+  .hero-copy > :nth-child(2) { animation-delay: .16s; }
+  .hero-copy > :nth-child(3) { animation-delay: .24s; }
+  .hero-copy > :nth-child(4) { animation-delay: .32s; }
+  .hero-copy > :nth-child(5) { animation-delay: .4s; }
+  .hero-art { animation: reveal-art .8s ease-out .24s both; }
+  .profile-section { animation: reveal-up .7s ease-out .35s both; }
+  .projects-section { animation: reveal-up .7s ease-out .45s both; }
+  .skills-section { animation: reveal-up .7s ease-out .55s both; }
+  .experience-section { animation: reveal-up .7s ease-out .65s both; }
+  .contact-section { animation: reveal-up .7s ease-out .75s both; }
+  .site-footer { animation: reveal-up .7s ease-out .85s both; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
