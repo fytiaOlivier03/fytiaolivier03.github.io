@@ -22,7 +22,6 @@ html {
 
 body {
   margin: 0;
-  padding-bottom: 5rem;
   background: var(--background);
   color: var(--text);
   font-family: var(--sans);
@@ -67,13 +66,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 }
 
 .site-footer {
-  position: fixed;
-  z-index: 20;
-  inset: auto 0 0;
   width: 100%;
   padding-inline: max(2vw, calc((100% - 1400px) / 2));
-  background: rgba(16, 23, 20, .96);
-  backdrop-filter: blur(14px);
 }
 
 .wordmark { display: inline-flex; align-items: center; gap: .7rem; font-weight: 700; letter-spacing: -.03em; }
@@ -97,7 +91,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .hero { position: relative; min-height: 610px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; padding-block: 3.5rem 4.5rem; }
 .hero-copy { position: relative; z-index: 1; padding-block: 1.5rem; }
 .hero-name { margin-bottom: 1.5rem; font-size: clamp(2.4rem, 4vw, 4rem); font-weight: 700; letter-spacing: -.06em; line-height: .98; }
-.hero-name span { display: block; color: var(--accent); }
+.hero-name span { display: block; color: var(--accent);}
 .eyebrow { margin: 0 0 1.2rem; color: var(--accent); font-family: var(--mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; }
 .status-dot { display: inline-block; width: 7px; height: 7px; margin-right: .55rem; background: var(--accent); border-radius: 50%; box-shadow: 0 0 12px rgba(193, 242, 120, .5); vertical-align: 1px; }
 
@@ -196,9 +190,36 @@ h1 { max-width: 720px; margin-bottom: 1.6rem; font-size: clamp(3.8rem, 7.6vw, 7.
 .form-message { grid-column: 1 / -1; }
 .form-submit { width: fit-content; cursor: pointer; font-family: inherit; }
 .form-note { max-width: 760px; margin: .8rem 0 1.2rem; color: var(--muted); font-size: .9rem; }
-.site-footer { min-height: 80px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+.site-footer {
+  display: grid;
+  min-height: 80px;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  padding-block: .6rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .9rem;
+}
 .site-footer p { margin: 0; }
+.footer-socials { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .4rem; }
+.social-link {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .4rem .6rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1;
+  transition: color .2s ease, border-color .2s ease;
+}
+.social-link:hover, .social-link:focus-visible { color: var(--accent); border-color: rgba(193, 242, 120, .5); }
+.social-link svg { width: 18px; height: 18px; flex: none; fill: currentColor; }
+.site-footer > p { justify-self: start; }
 .back-top { color: var(--muted); }
+.site-footer > .back-top { justify-self: end; }
 
 @media (max-width: 900px) {
   .hero { min-height: auto; grid-template-columns: 1fr .75fr; gap: 1rem; padding-block: 3.5rem 4rem; }
@@ -210,10 +231,13 @@ h1 { max-width: 720px; margin-bottom: 1.6rem; font-size: clamp(3.8rem, 7.6vw, 7.
 
 @media (max-width: 680px) {
   html { scroll-padding-top: 1.5rem; }
-  body { padding-bottom: 7rem; }
   .site-header { width: 100%; min-height: 70px; padding-inline: 1.25rem; }
   .site-footer, .section-wrap { width: min(100% - 2.5rem, 540px); }
   .site-footer { width: 100%; padding-inline: 1.25rem; }
+  .site-footer { grid-template-columns: 1fr 1fr; }
+  .footer-socials { grid-column: 1 / -1; }
+  .site-footer > p { grid-column: 1; grid-row: 2; }
+  .site-footer > .back-top { grid-column: 2; grid-row: 2; }
   .site-nav { gap: .9rem; }
   .site-nav a { font-size: .9rem; }
   .site-nav a:nth-child(1), .site-nav a:nth-child(3) { display: none; }
@@ -253,8 +277,8 @@ h1 { max-width: 720px; margin-bottom: 1.6rem; font-size: clamp(3.8rem, 7.6vw, 7.
   .contact-form { grid-template-columns: 1fr; }
   .form-message { grid-column: auto; }
   .contact-links { align-items: flex-start; gap: 1rem 1.3rem; }
-  .site-footer { min-height: 82px; flex-wrap: wrap; gap: .5rem 1rem; padding-block: 1rem; }
-  .site-footer p { order: 1; width: 100%; }
+  .site-footer { min-height: 100px; gap: .5rem; padding-block: .7rem; }
+  .site-footer p { width: auto; }
   .back-top { font-size: .7rem; }
 }
 

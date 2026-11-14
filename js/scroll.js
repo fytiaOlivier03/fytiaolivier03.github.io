@@ -21,7 +21,7 @@ if (prefersReducedMotion || !("IntersectionObserver" in window)) {
       observer.unobserve(entry.target);
     });
   }, {
-    rootMargin: "0px 0px -64px 0px",
+    rootMargin: "0px",
     threshold: 0.12
   });
 
